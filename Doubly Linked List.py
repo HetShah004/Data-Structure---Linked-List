@@ -62,11 +62,11 @@ class DoublyLinkedList:
             if crr.data == data:
                 break
             crr = crr.next
-        if crr.next is None:
-            print(f"{data} is not in the list")
+        if crr.data == data:
+            print(f"{data} is in the list")
             return True
         else:
-            print(f"{data} is in the list")
+            print(f"{data} is not in the list")
             return False
 
     def remove_head(self):
