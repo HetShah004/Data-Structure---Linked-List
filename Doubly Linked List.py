@@ -105,6 +105,7 @@ class DoublyLinkedList:
         if crr.data == pos:
             self.head.next = new_node
             new_node.prev = self.head
+            self.length += 1
             return
         while crr is not None:
             if crr.data == pos:
@@ -116,4 +117,5 @@ class DoublyLinkedList:
         new_node.next = crr.next
         new_node.prev = crr
         crr.next = new_node
+        self.length += 1
         return
